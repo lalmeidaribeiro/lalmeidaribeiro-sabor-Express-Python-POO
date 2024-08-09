@@ -18,9 +18,13 @@ class Restautante:
 
     @property #Ter a capacidade de pegar um atributo ex: Ativo a forma como é lido 
     def ativo(self):
-        return '⌧' if self._ativo else '☐'
+        return '✔️' if self._ativo else '❌'
+    
+    def alternar_estador(self):
+        self._ativo = not self._ativo
 
 restaurante_praca = Restautante('Praça', 'Groumet')
+restaurante_praca.alternar_estador()
 restaurante_pizza = Restautante('Pizza Express', 'Italiana')  
 restaurante_manoel = Restautante('Seu Manoel', 'Francesa')
 
