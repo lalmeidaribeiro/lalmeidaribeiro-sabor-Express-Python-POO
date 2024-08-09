@@ -1,23 +1,18 @@
 class Restautante:
-    nome = '' 
-    categoria = ''
-    ativo = False
+    def __init__(self, nome, categoria): #Acessa os atributos da classe realizando qualquer operaçao necessária para inicializar o objeto 
+        self.nome = nome 
+        self.categoria = nome
+        self. ativo = False
 
-restaurante_praca = Restautante()
-restaurante_praca.nome = 'Praça'
-restaurante_praca.categoria = 'Gourmet'
+restaurante_praca = Restautante('Praça', 'Groumet')
+restaurante_pizza = Restautante('Pizza Express', 'Italiana')  
+restaurante_manoel = Restautante('Seu Manoel', 'Francesa')
 
-restaurante_pizza = Restautante()  
-restaurante_pizza.nome = 'Pizza Place'
-restaurante_pizza.categoria = 'Fast Food'
 
-restauranteManoel = Restautante()
-restauranteManoel.nome = 'Seu Manoel Massas'
-restauranteManoel.categoria = 'Italiana'
-restauranteManoel.ativo = True
+lista_restaurantes = [restaurante_praca,restaurante_pizza, restaurante_manoel]
 
-lista_restaurantes = [restaurante_praca,restaurante_pizza, restauranteManoel]
-
-#print(dir(restaurante_praca)) #função dir ele exibe os atributos do objeto
+#print(dir(restaurante_praca)) #função dir ele exibe os metodos da clase que está dentro do parametro
 #print(restaurante_praca.ativo) #Busca uma variavel da classe 
 print(vars(restaurante_praca))#função que exibe o dicionario da classe
+print(vars(restaurante_pizza))
+print(vars(restaurante_manoel))
