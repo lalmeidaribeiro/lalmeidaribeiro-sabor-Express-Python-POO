@@ -21,6 +21,4 @@ musica1 = Musica('Pontos de exclamação','Vintage Culture',150)
 musica2 = Musica('Vacilão','Revelação',10)
 musica3 = Musica('Camarão que dorme a onda leva','Beth Carvalho',20)
 
-
-
 print(f'{musica1}\n{musica2}\n{musica3}')
