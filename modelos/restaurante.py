@@ -2,18 +2,18 @@ class Restautante:
     restaurantes = []
 
     def __init__(self, nome, categoria): #Acessa os atributos da classe realizando qualquer operaçao necessária para inicializar o objeto 
-        self.nome = nome 
-        self.categoria = categoria
+        self._nome = nome.title() #Cria a validação do primeiro caractere em maiusculo 
+        self._categoria = categoria.upper()#Deixa todas as letras maiusculas 
         self._ativo = False #_ativo virou um atributo provado
         Restautante.restaurantes.append(self)
 
     def __str__(self): #Informar o objeto em string/texto. Sem essa def mostratiamos apenas o local da memória Self é a referencia de quem ta chamando a função 
-        return f'{self.nome} | {self.categoria}' 
+        return f'{self._nome} | {self._categoria}' 
 
     def listar_restaurantes():
         print(f'{'Nome do Restaurante'.ljust(25)} | {'Categoria'.ljust(23)} | {'Status'}\n')
         for restaurante in Restautante.restaurantes:
-            print(f'{restaurante.nome.ljust(25)} | {restaurante.categoria.ljust(23)} | {restaurante.ativo}')
+            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(23)} | {restaurante.ativo}')
 
     @property #Ter a capacidade de pegar um atributo ex: Ativo a forma como é lido 
     def ativo(self):
