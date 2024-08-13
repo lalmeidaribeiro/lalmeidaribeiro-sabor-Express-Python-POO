@@ -13,7 +13,7 @@ class Restautante:
     def __str__(self): #Informar o objeto em string/texto. Sem essa def mostratiamos apenas o local da memória Self é a referencia de quem ta chamando a função 
         return f'{self._nome} | {self._categoria}' 
 
-    @classmethod
+
     def listar_restaurantes(cls):
         print(f'{'Nome do Restaurante'.ljust(25)} | {'Categoria'.ljust(23)} | {'Avaliação'.ljust(23)} | {'Status'}\n')
         for restaurante in cls.restaurantes:
