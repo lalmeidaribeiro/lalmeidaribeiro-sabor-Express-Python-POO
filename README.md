@@ -9,7 +9,7 @@
 ## Funcionalidades
 - Listagem de Restaurantes: Exibe uma lista de todos os restaurantes cadastrados, utilizando o decorador @classmethod para modificar o comportamento de métodos em classes.
 - Ativação/Desativação de Restaurantes: Permite definir se um restaurante está ativo ou inativo, utilizando o decorador @property.  
-- CAvaliação de Restaurantes: Inclui métodos para calcular a média das avaliações de cada restaurante e validação das notas atribuídas.
+- Avaliação de Restaurantes: Inclui métodos para calcular a média das avaliações de cada restaurante e validação das notas atribuídas.
 
 ## Diferenciais em Relação ao Primeiro Projeto:
 Ao contrário do primeiro projeto, este repositório possui menos funcionalidades, pois o foco principal é o aprendizado dos conceitos de POO e sua aplicação prática, ao invés de desenvolver um produto completo.
