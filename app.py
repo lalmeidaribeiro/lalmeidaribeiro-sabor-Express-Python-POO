@@ -7,11 +7,13 @@ restaurante_praca = Restautante('Praça', 'Gourmet')
 #restaurante_praca.receber_avaliacao('Bru',8)
 #restaurante_praca.receber_avaliacao('JJ',2)
 bebida_suco = Bebida('Suco de Melancia', 5.0, 'Grande')
+bebida_suco.aplicar_desconto()
+
 prato_paozinho = Prato('Paozinho', 2.0, 'O melhor pão da cidade')
- 
+prato_paozinho.aplicar_desconto()
+
 restaurante_praca.adicionar_no_cardapio(bebida_suco)
 restaurante_praca.adicionar_no_cardapio(prato_paozinho)
-
 
 restaurante_pizza = Restautante('Pizza Express', 'Italiana')  
 #restaurante_pizza.receber_avaliacao('Lele', 5)
