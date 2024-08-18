@@ -6,9 +6,11 @@ restaurante_praca = Restautante('Praça', 'Gourmet')
 #restaurante_praca.receber_avaliacao('Lari', 10)
 #restaurante_praca.receber_avaliacao('Bru',8)
 #restaurante_praca.receber_avaliacao('JJ',2)
-restaurante_praca = bebida_suco = Bebida('Suco de Melancia', 5.0, 'Grande')
-restaurante_praca = prato_paozinho = Prato('Paozinho', 2.0, 'O melhor pão da cidade')
+bebida_suco = Bebida('Suco de Melancia', 5.0, 'Grande')
+prato_paozinho = Prato('Paozinho', 2.0, 'O melhor pão da cidade')
  
+restaurante_praca.adicionar_no_cardapio(bebida_suco)
+restaurante_praca.adicionar_no_cardapio(prato_paozinho)
 
 
 restaurante_pizza = Restautante('Pizza Express', 'Italiana')  
@@ -27,7 +29,7 @@ restaurante_manoel = Restautante('Seu Manoel', 'Francesa')
 
 def main():
     #Restautante.listar_restaurantes()
-    print(bebida_suco)
-    print(prato_paozinho)
+    restaurante_praca.exibir_cardapio
+
 if __name__ == '__main__':
     main()

@@ -1,5 +1,5 @@
 from modelos.avaliacao import Avaliacao
-
+from modelos.cardapio.item_cardapio import ItemCardapio
 class Restautante:
     """Representa um restaurante e suas características."""
 
@@ -18,6 +18,7 @@ class Restautante:
         self._categoria = categoria.upper()#Deixa todas as letras maiusculas 
         self._ativo = False #_ativo virou um atributo provado
         self._avaliacao = []
+        self._cardapio = []
         Restautante.restaurantes.append(self)
 
     def __str__(self): #Informar o objeto em string/texto. Sem essa def mostratiamos apenas o local da memória Self é a referencia de quem ta chamando a função 
@@ -65,7 +66,20 @@ class Restautante:
         media = round(soma_das_notas/quantidade_de_notas,1)
         return media
 
+    def adicionar_no_cardapio(self, item):
+        if isinstance(item,ItemCardapio): #isinstance verifica se um item está dentro do cardapio se não, não faz nada
+            self._cardapio.append(item)
 
+    @property
+    def exibir_cardapio(self):
+        print(f'Cardapiodo restaurante {self._nome}\n')
+        for i,item in enumerate(self._cardapio,start=1):
+            if hasattr(item,'descricao'):
+                mensagem_prato = f'{i}. Nome:{item._nome} | Preço: R$:{item._preco} | Descricao: {item.descricao}'
+                print(mensagem_prato)
+            else:
+                mensagem_bebida = f'{i}. Nome:{item._nome} | Preço: R$:{item._preco} | Tamanho {item.tamanho}'
+                print(mensagem_bebida)
 
 #print(dir(restaurante_praca)) #função dir ele exibe os metodos da clase que está dentro do parametro
 #print(restaurante_praca.ativo) #Busca uma variavel da classe 

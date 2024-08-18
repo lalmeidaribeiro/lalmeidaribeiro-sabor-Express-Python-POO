@@ -7,3 +7,5 @@ class Prato(ItemCardapio): #Herdando informações da classe ItemCardapio
     
     def __str__(self): 
         return self._nome
+
+  
