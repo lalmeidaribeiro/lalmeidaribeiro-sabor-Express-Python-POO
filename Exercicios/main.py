@@ -21,9 +21,9 @@
 from projeto.exercicios.carro import Carro
 from projeto.exercicios.moto import Moto
 
-carro_1 = {'Fiat', 'Uno - 2013', 3}
-carro_2 = {'Honda', 'Creta - 2018', 5}
-carro_3 = {'AUDI', 'Q8 - 2024', 5}
+carro_1 = {'Fiat', 'Uno - 2013', 3, 'Branco'}
+carro_2 = {'Honda', 'Creta - 2018', 5,'Caramelo'}
+carro_3 = {'AUDI', 'Q8 - 2024', 5,'Preta'}
 
 moto_1 = {'Shineray', 'SHI-175', 'Esportiva'}
 moto_2 = {'Yamaha', 'SCB 300F Twister', 'Casual'}
